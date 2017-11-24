@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "split_with_display_length"
+require "split_with_display_width"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
