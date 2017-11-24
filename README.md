@@ -1,8 +1,9 @@
 # SplitWithDisplayWidth
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/split_with_display_width`. To experiment with that code, run `bin/console` for an interactive prompt.
+Add split_with_display_width_from_start and split_with_display_width_from_end to String
 
-TODO: Delete this and the text above, and describe your gem
+The idea is a splitting with display width almost Shift JIS from end or beginning. See Usage
+
 
 ## Installation
 
@@ -22,7 +23,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+irb(main):001:0> 'あいうえお'.split_with_display_width_from_start(3)
+=> ["あ", "いうえお"]
+irb(main):002:0> 'あいうえお'.split_with_display_width_from_end(3)
+=> ["あいうえ", "お"]
 
 ## Development
 
