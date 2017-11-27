@@ -43,6 +43,12 @@ RSpec.describe String do
         it {expect(subject[0]).to eq 'あ3456789'}
         it {expect(subject[1]).to eq '0'}
       end
+      context '収まらない混合' do
+        let(:str) {'123456789あ0'}
+        let(:num) {10}
+        it {expect(subject[0]).to eq '123456789'}
+        it {expect(subject[1]).to eq 'あ0'}
+      end
     end
   end
   describe '.split_with_display_width_from_end' do
@@ -86,6 +92,12 @@ RSpec.describe String do
         let(:num) {9}
         it {expect(subject[0]).to eq 'あ'}
         it {expect(subject[1]).to eq '34567890'}
+      end
+      context '収まらない混合' do
+        let(:str) {'1あ234567890'}
+        let(:num) {10}
+        it {expect(subject[0]).to eq '1あ'}
+        it {expect(subject[1]).to eq '234567890'}
       end
     end
   end

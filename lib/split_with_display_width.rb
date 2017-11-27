@@ -6,11 +6,13 @@ class String
 
     first = []
     second = []
+    flag = true
     self.each_char.each do |char|
       tmp = first + [char]
-      if tmp.join.display_width <= num
+      if tmp.join.display_width <= num && flag
         first << char
       else
+        flag = false
         second << char
       end
     end
@@ -23,11 +25,13 @@ class String
 
     first = []
     second = []
+    flag = true
     self.each_char.to_a.reverse.each do |char|
       tmp = second + [char]
-      if tmp.join.display_width <= num
+      if tmp.join.display_width <= num && flag
         second << char
       else
+        flag = false
         first << char
       end
     end
